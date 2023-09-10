@@ -1,5 +1,5 @@
 $disk = 0
-$exe = "<path to exe>"
+$exe = "<path to sus-loader.img>"
 $binData = [System.IO.File]::ReadAllBytes($exe)
 $bytesWritten = $binData.Length
 
