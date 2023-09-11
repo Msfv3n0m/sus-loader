@@ -3,7 +3,7 @@
 
 main:
     mov ah, 0h      ; set video mode
-    mov ax, 13h     ; mode 13h = 320x200 pixels with 256 colors 
+    mov ax, 13h     ; mode 13h = 320x200 pixels with 256 colors
     int 10h         ; interrupt 10h offers video services
     push 0xa000     ; a000 is the memory address for the beginning of video memory
     pop es          ; load es register with a000h
@@ -146,6 +146,8 @@ draw:
     mov bx, 10
     mov di, 50*320+15
     call stars_loop
+    jmp draw_text
+
 stars_loop:
     mov cx, 1               ; the star should be 1x1 pixels 
     rep stosb               ; write the star 
@@ -155,6 +157,33 @@ stars_loop:
     cmp bx, 0               ; compare the bx register to 0
     jnz stars_loop          ; if the bx register is not 0, restart the stars_loop    
     ret                     ; else, return
+
+draw_text:
+    mov ah, 02h
+    mov bh, 0h
+    mov dh, 0ah
+    mov dl, 3h
+    int 10h
+
+    mov si, message
+    mov ah, 0eh
+    xor bh, bh
+    mov bl, 0fh
+    xor dh, dh
+    xor dl, dl
+
+msgloop:
+    mov al, [si]
+    cmp al, 0
+    je end
+    int 10h
+    inc si
+    jmp msgloop
+
+endmsgloop:
+    message db 'Judah was not the imposter',0
+
+end:
 
 times 510-($-$$) db 0   ; fill current position until byte 510 with 0s 
 dw 0xaa55               ; ibm magic bytes, if this were not here it would indicate that the device is not compatible with ibm 
