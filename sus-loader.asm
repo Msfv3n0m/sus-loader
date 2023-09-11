@@ -2,6 +2,10 @@
     org 0x7c00      ; load all labels in reference to 0x7c00 because that is the memory address of the mbr
 
 main:
+    xor ax, ax
+    mov es, ax
+    mov ds, ax
+
     mov ah, 0h      ; set video mode
     mov ax, 13h     ; mode 13h = 320x200 pixels with 256 colors
     int 10h         ; interrupt 10h offers video services
