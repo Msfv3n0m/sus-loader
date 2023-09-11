@@ -182,7 +182,7 @@ msgloop:
     je end
     int 10h
 
-    mov ah, 0x86
+    mov ah, 0x86        ; some info on waits: https://stackoverflow.com/questions/45765480/interrupt-0x15-function-0x86-bios-wait-runs-far-slower-on-real-hardware-than-o
     mov cx, 01h
     mov dx, 0e848h
     int 15h
