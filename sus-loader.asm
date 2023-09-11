@@ -2,7 +2,7 @@
     org 0x7c00      ; load all labels in reference to 0x7c00 because that is the memory address of the mbr
 
 main:
-    xor ax, ax
+    xor ax, ax      ; these three lines are needed to print text because the CS,DS,ES,SS,SP registers get messed up: https://stackoverflow.com/questions/23723828/interrupt-10h-is-not-displaying-a-string
     mov es, ax
     mov ds, ax
 
