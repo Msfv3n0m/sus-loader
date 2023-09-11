@@ -25,3 +25,7 @@ Just run the `overwrite-mbr.ps1` file as an administrator to overwrite the mbr w
 
 Run this command to overwrite the mbr with sus-loader.img: </br>
 `sudo dd if=sus-loader.img of=/dev/sda bs=512 count=1`
+
+## References
+- https://stackoverflow.com/questions/23723828/interrupt-10h-is-not-displaying-a-string
+- https://stackoverflow.com/questions/23721441/how-to-stop-certain-point-for-adding-pixels-int10h-for-assembly-8086
