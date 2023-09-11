@@ -191,7 +191,7 @@ msgloop:
     jmp msgloop
 
 endmsgloop:
-    message db 'Player1 was not the imposter',0
+    message db 'Cadet0 was not the imposter',0
 
 end:
 
