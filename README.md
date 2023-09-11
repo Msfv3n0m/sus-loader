@@ -14,7 +14,7 @@ sus-loader is a Stage 1 BIOS bootloader. The master boot record (mbr) in legacy 
 `make`: build and run project with qemu </br>
 `make build`: build the project </br>
 `make run`: run the project with qemu </br>
-
+`./makeAll.sh`: make 10 bootloaders with the number incrimenting from 0
 ### Bare Metal
 
 #### Windows
