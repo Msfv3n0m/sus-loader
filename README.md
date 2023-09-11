@@ -4,7 +4,7 @@ This project was inspired by https://github.com/brainsmoke/nyanmbr </br>
 
 ## Description
 
-sus-loader is a Stage 1 BIOS bootloader. The master boot record (mbr) in legacy BIOS devices is 512 bytes. Therefore, a program must be under 512 bytes to fit into the first stage of the boot process. This project is merely 400 bytes. </br>
+sus-loader is a Stage 1 BIOS bootloader. The master boot record (mbr) in legacy BIOS devices is 512 bytes. Therefore, a program must be under 512 bytes to fit into the first stage of the boot process. This project is merely 412 bytes. </br>
 ![](https://github.com/Msfv3n0m/sus-loader/blob/main/sus.PNG)
 
 ## Usage

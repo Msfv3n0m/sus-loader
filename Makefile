@@ -1,5 +1,6 @@
 default: sus-loader.img run
 
+build: sus-loader.img
 sus-loader.img: sus-loader.asm
 	nasm sus-loader.asm -o sus-loader.img
 
