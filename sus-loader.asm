@@ -165,8 +165,8 @@ stars_loop:
 draw_text:
     mov ah, 02h
     mov bh, 0h
-    mov dh, 0ah
-    mov dl, 3h
+    mov dh, 0bh
+    mov dl, 5h
     int 10h
 
     mov si, message
