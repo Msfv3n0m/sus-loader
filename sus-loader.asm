@@ -166,22 +166,28 @@ draw_text:
     int 10h
 
     mov si, message
+
+msgloop:
     mov ah, 0eh
     xor bh, bh
     mov bl, 0fh
     xor dh, dh
     xor dl, dl
-
-msgloop:
     mov al, [si]
     cmp al, 0
     je end
     int 10h
+
+    mov ah, 0x86
+    mov cx, 01h
+    mov dx, 0e848h
+    int 15h
+
     inc si
     jmp msgloop
 
 endmsgloop:
-    message db 'Judah was not the imposter',0
+    message db 'Andrew was not the imposter',0
 
 end:
 
