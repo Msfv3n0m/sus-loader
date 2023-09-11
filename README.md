@@ -29,3 +29,4 @@ Run this command to overwrite the mbr with sus-loader.img: </br>
 ## References
 - https://stackoverflow.com/questions/23723828/interrupt-10h-is-not-displaying-a-string
 - https://stackoverflow.com/questions/23721441/how-to-stop-certain-point-for-adding-pixels-int10h-for-assembly-8086
+- https://stackoverflow.com/questions/45765480/interrupt-0x15-function-0x86-bios-wait-runs-far-slower-on-real-hardware-than-o
