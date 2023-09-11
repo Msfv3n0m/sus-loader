@@ -4,6 +4,7 @@ if [ ! -d "./cadets" ]; then
   mkdir cadets
 fi
 make build
+mv sus-loader.img "./cadets/cadet$i.img"
 until [ $i -eq 10 ]
 do
   sed -i "s/Cadet$j/Cadet$i/g" 'sus-loader.asm'
