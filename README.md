@@ -11,7 +11,7 @@ sus-loader is a Stage 1 BIOS bootloader. The master boot record (mbr) in legacy 
 `make run`: run the project with qemu </br>
 ### Bare Metal
 #### Windows
-Just run the `overwrite-mbr.ps1` file as an administrator
+Just run the `overwrite-mbr.ps1` file as an administrator to overwrite the mbr with sus-loader.img
 #### Linux
-Run this command: </br>
+Run this command to overwrite the mbr with sus-loader.img: </br>
 `sudo dd if=sus-loader.img of=/dev/sda bs=512 count=1`
