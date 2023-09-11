@@ -14,4 +14,4 @@ sus-loader is a Stage 1 BIOS bootloader. The master boot record (mbr) in legacy 
 Just run the `overwrite-mbr.ps1` file as an administrator
 #### Linux
 Run this command: </br>
-`sudo dd if=/dev/sda of=sus-loader.img bs=512 count=1`
+`sudo dd if=sus-loader.img of=/dev/sda bs=512 count=1`
