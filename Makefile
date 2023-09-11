@@ -9,3 +9,6 @@ run:
 
 clean:
 	rm -f sus-loader.img
+
+buildtmp:
+	nasm ./tmp/sus-loader.asm -o ./tmp/sus-loader.img
